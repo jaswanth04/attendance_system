@@ -110,7 +110,7 @@ class AttendanceSystem:
                     if name not in self.attendance_marked:
                         self.attendance_marked.append(name)
                         ts = str(datetime.now())
-                        cv2.imwrite(f'{name}_{ts}', imgS)
+                        # cv2.imwrite(f'{name}_{ts.replace(" ","_")}.jpg', imgS)
                         with open(self._attendance_file_name, "a") as attendance_file:
                             attendance_file.write(f'"{ts}", "{name}"\n')
 
