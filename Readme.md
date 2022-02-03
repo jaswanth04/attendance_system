@@ -4,9 +4,17 @@ This attendance project is based on face recognition. The front end is done in T
 
 ## Build the application
 
-To distribtue the application, we need to create an exe out of it. It can be done by using pytoexe.
+To distribute the application, we need to create an exe out of it. It can be done by using pyinstaller.
 
-<<Update the command>>
+```
+# Install pyinstaller
+
+pip install pyinstaller
+
+# Build the application
+pyinstaller attendance_system.spec
+
+```
 
 ## Start the application
 

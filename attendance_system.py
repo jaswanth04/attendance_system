@@ -87,7 +87,11 @@ class AttendanceSystem:
             _, frame = cap.read()
             frame = cv2.flip(frame, 1)
             
-            cv2image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            try:
+                cv2image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            except:
+                messagebox.showerror("Webcam", "Webcam not found!!")
+                return
             # cv2image = cv2.resize(cv2image, (800, 600))
             imgS = cv2.resize(cv2image, (0, 0), None, 0.25, 0.25)
             # imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)

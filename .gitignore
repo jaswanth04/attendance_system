@@ -1,1 +1,4 @@
 __pycache__
+build/
+fr_models/
+dist/
